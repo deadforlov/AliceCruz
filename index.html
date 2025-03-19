@@ -21,6 +21,7 @@
             font-family: Arial, sans-serif;
             overflow: hidden;
             position: relative;
+            width: 100%;
         }
 
         .video-container {
@@ -46,6 +47,7 @@
             align-items: center;
             position: relative;
             padding: 20px;
+            width: 100%;
         }
 
         .neon-text {
@@ -143,6 +145,40 @@
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
 
+        /* Медиазапросы для адаптивности */
+        @media screen and (max-width: 768px) {
+            .neon-text {
+                font-size: 50px;
+                letter-spacing: 5px;
+            }
+
+            .btn {
+                width: 90%;
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .video-container video {
+                object-fit: cover;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .neon-text {
+                font-size: 40px;
+                letter-spacing: 3px;
+            }
+
+            .btn {
+                width: 90%;
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .video-container video {
+                object-fit: cover;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
